@@ -12,14 +12,14 @@ const Log = async (stack, level, packageName, message, token) => {
       },
       {
         headers: {
-          Authorization: Bearer ${token},
+          Authorization: `Bearer ${token}`,
         },
       }
     );
 
-    console.log("Log created:", response.data);
+    console.log("SUCCESS:", response.data);
   } catch (error) {
-    console.error("Logging failed:", error.message);
+    console.log("ERROR:", error.message);
   }
 };
 
